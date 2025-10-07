@@ -91,3 +91,23 @@ class BST:
         if node is None:
             return []
         return self._postorder(node.left) + self._postorder(node.right) + [node.key]
+
+
+# ---------- Example Usage ----------
+if __name__ == "__main__":
+    bst = BST()
+    # Insert elements
+    for val in [50, 30, 70, 20, 40, 60, 80]:
+        bst.insert(val)
+
+    print("Inorder (sorted):", bst.inorder())
+    print("Preorder:", bst.preorder())
+    print("Postorder:", bst.postorder())
+
+    # Search
+    key = 40
+    print(f"Search {key}:", "Found" if bst.search(key) else "Not Found")
+
+    # Delete a node
+    bst.delete(30)
+    print("After deleting 30, inorder:", bst.inorder())
