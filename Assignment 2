@@ -38,3 +38,4 @@ else:
 if binary_search(account_ids, target_id):
     print("Binary Search: Account ID found.")
 else:
+     print("Binary Search: Account ID not found.")
